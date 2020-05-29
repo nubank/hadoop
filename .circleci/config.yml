@@ -1,0 +1,8 @@
+version: 2.1
+jobs:
+  build:
+    docker: 
+      - image: circleci/openjdk:8-jdk-stretch
+    steps:
+      - checkout # check out the code in the project directory
+      - run: mvn package
